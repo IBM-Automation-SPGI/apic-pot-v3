@@ -120,7 +120,8 @@ echo "access:
 ```
 stepzen import curl "<REPLACE-WITH-GETACCOUNT-URL>"
 ```
-Replace **\<REPLACE-WITH-GETACCOUNT-URL\>** with the URL: ``http://ace-salesforce-account-api-http-cp4i-ace.apps.65d8d6e029e233001119dc56.cloud.techzone.ibm.com/sf-account-api/v1/getAccount?id=0017Q00000Ikh8SQAR``. This is the REST endpoint of the existing Salesforce service.
+
+Replace **\<REPLACE-WITH-GETACCOUNT-URL\>** with the value for the *getAccount* endpoint provided by the instructor within the parameters file . This is the REST endpoint of the existing Salesforce service.
 
 ![](images/stepzen-import-getaccount.png)
 
@@ -135,7 +136,8 @@ Replace **\<REPLACE-WITH-GETACCOUNT-URL\>** with the URL: ``http://ace-salesforc
 ```
 stepzen import curl "<REPLACE-WITH-GETACCOUNTS-URL>"
 ```
-Replace **\<REPLACE-WITH-GETACCOUNTS-URL\>** with the URL: ``http://ace-salesforce-account-api-http-cp4i-ace.apps.65d8d6e029e233001119dc56.cloud.techzone.ibm.com/sf-account-api/v1/getAccounts``. This is the REST endpoint of the existing Salesforce service.
+
+Replace **\<REPLACE-WITH-GETACCOUNTS-URL\>** with the value for the *getAccounts* endpoint provided by the instructor within the parameters file. This is the REST endpoint of the existing Salesforce service.
 
 ![](images/stepzen-import-getaccounts.png)
 
