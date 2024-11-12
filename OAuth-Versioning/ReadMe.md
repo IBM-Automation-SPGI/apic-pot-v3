@@ -509,15 +509,11 @@ In this section, you will test the new version of the API to ensure that OAuth i
 
 ![alt text][pic81]
 
-17\. Select th **oauth-1** in the drop down menu.
-
-![alt text][pic81-1]
-
-18\. Confirm that your application is shown in the **API Key** and enter your application secret for the **API Secret**.
+17\. Confirm that your application is shown in the **API Key** and enter your application secret for the **API Secret**.
 
 ![alt text][pic88]
 
-19\. In the **Username** and **Password** fields, you can enter any text. Select `customer` for the **Scopes**.
+18\. In the **Username** and **Password** fields, you can enter any text. Select `customer` for the **Scopes**.
 
 Recall that when we configured the OAuth API, we provided an Authentication URL as the method for validating the user credentials. The URL that we provided will respond back OK with any credentials.
 
