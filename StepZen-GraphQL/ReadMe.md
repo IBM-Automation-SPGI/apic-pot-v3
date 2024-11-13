@@ -87,7 +87,7 @@ Make sure you replace **\<account\>** with the **Account** you copied in the pre
 
 ## 2b. Import the Salesforce Account API Operations into the API Connect Essentials Configuration <a name="stepzen_import"></a>
 
-Next, you will be importing the getAccount and getAccounts operations into StepZen.
+Next, you will be importing the `getAccount` and `getAccounts` operations into StepZen.
 
 1\. Using the terminal, create a directory called `stepzen-salesforce-account-api`.
 
@@ -95,15 +95,12 @@ Next, you will be importing the getAccount and getAccounts operations into StepZ
 mkdir stepzen-salesforce-account-api
 ```
 
-![](images/stepzen-terminal-mkdir.png)
-
 2\. Change into the `stepzen-salesforce-account-api` directory.
 
 ```
 cd stepzen-salesforce-account-api
 ```
 
-![](images/stepzen-terminal-cd.png)
 
 3\. Copy the below 5 lines as-is, and paste in the command line. This will create a file named `config.yaml`.
 
