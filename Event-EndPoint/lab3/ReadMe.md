@@ -167,7 +167,7 @@ Use the Java Client application and receive the flight landing events thru the I
 
 	Update the variables in the script with the corresponding values and save it. Please don't forget to update also the property for the keystore file, as follows:
 	```
-	SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG=/home/student/POT-EEM-Lab/egw-cert.jks
+	SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG=/home/ibmuser/POT-EEM-Lab/egw-cert.jks
 	```
 
 	Also run ```cd ..``` to get back to right directory.
