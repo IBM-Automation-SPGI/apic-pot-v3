@@ -74,7 +74,7 @@ In this lab, we will leverage an existing REST API to create an API Connect Esse
 8\. In the terminal, log in with the Account that you copied in the step above.
 
 ```
-stepzen login -a <account>
+stepzen login eu-central-a.ibm.stepzen.net -a <account>
 ```
 
 Make sure you replace **\<account\>** with the **Account** you copied in the previous step.
