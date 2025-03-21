@@ -92,7 +92,7 @@ If you are already logged into APIC UI please go to step 4, or even if you are a
 1. A window will pop up saying the *Application created successully*
 
     **Important** You need to save the key and secret that were generated for your new app.<br>
-    On the Desktop of the VDI you are using there is a text file **EEM-info**.   Open it and save the key and secret for use later in testing.
+    On the Desktop of the VDI you are using there is a text file.   Open it and save the key and secret for use later in testing.
 
     When done click **OK**
 
@@ -106,7 +106,7 @@ If you are already logged into APIC UI please go to step 4, or even if you are a
 
     ![](../images/devp13a.png)
 
-1. We now will select the app that we created to subscribe to this.
+1. We now will select the app that we created to subscribe to this Plan.
 
     ![](../images/devp14.png)
 

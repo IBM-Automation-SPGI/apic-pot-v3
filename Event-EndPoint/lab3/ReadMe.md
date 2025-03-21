@@ -12,7 +12,7 @@ In this lab, you will consume the flight landing events using Kafka Clients like
 
 You should be logged on your VDI as *student*.
 
-1. Open a Firefox browser tab and navigate to [Github eemonCP4i](https://github.com/IBM-Automation-SPGI/eemoncp4i).
+1. Open a Firefox browser tab and navigate to [Github eemonCP4i](https://github.com/jjodl/eemoncp4i).
 
 	![](./images/setup1.png)
 
@@ -24,9 +24,9 @@ You should be logged on your VDI as *student*.
 
 	![](./images/setup3.png)
 
-1. Open a terminal window by double-clicking the icon on the desktop.
+1. Open a terminal window by clicking the icon located on  *Applications/Favorites* to execute some commands.
 
-	![](./images/image111.png)
+	![](./images/setup3b.png)
 
 1. Enter the following command to see the zip file you just downloaded.
 
@@ -73,7 +73,7 @@ You should be logged on your VDI as *student*.
 Obtain Event Gateway bootstrap certificate, to be used by the Kafka Consumer clients. <br>
 A set of files with Gateway Bootstrap certificate is already available and provided by instructor in the student resources folder.
 
-1. Download the Gateway Bootstrap certificate files (*egw-cert.jks*,*egw-cert.p12*,*egw-cert.pem*) from the resources shared box folder
+1. Download the Gateway Bootstrap certificate files (*egw-cert.jks*,*egw-cert.p12*,*egw-cert.pem*) from the resources shared box folder. Ignore/close if a promp dialog appears asking to log in.
 
 	![](./images/setup7.png)
 
@@ -107,7 +107,7 @@ Receive flight landing events using open-source kafka-console-consumer.sh <br>
 
 	![](./images/client6.png)
 
-1. Click on the dropdown for flight landing and select the subscribe.  This will give you code snippets to get started.
+1. Click on the dropdown for flight landing and select the **Subscribe** operation.  This will give you code snippets to get started.
 
 	Select the kafka-console-consumer
 
@@ -121,19 +121,11 @@ Receive flight landing events using open-source kafka-console-consumer.sh <br>
 
 	![](./images/client8.png)
 
-1. Go back to the gedit you open the script wit and replace the items.
+1. Go back to the gedit you open the script with and replace the value of those variables.
 
 	![](./images/client9.png)
 
-1. Also, change the set values of the following consumer properties
-	```
-	ssl.truststore.location=./egw-cert.jks
-	ssl.truststore.type=JKS
-	```
-
-	Save changes.
-
-	![](./images/client9a.png)
+1. Click **Save** to save changes.
 
 1. Now from the cmd terminal make sure you are in the POT-EM-Lab directory and run the flight_landings_asyncapi_kafka_console.sh
 
@@ -167,7 +159,7 @@ Use the Java Client application and receive the flight landing events thru the I
 
 	Update the variables in the script with the corresponding values and save it. Please don't forget to update also the property for the keystore file, as follows:
 	```
-	SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG=/home/ibmuser/POT-EEM-Lab/egw-cert.jks
+	SslConfigs.SSL_TRUSTSTORE_LOCATION_CONFIG=/home/student/POT-EEM-Lab/egw-cert.jks
 	```
 
 	Also run ```cd ..``` to get back to right directory.

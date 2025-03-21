@@ -32,6 +32,8 @@ Access to the event sources are managed by the Event Gateway. The Event Gateway 
 
     You should see the **FLIGHT.LANDINGS** topic.
 
+    <span style="color:red">Make sure you clicked on the Topic icon and you are in the Topics page</span>
+
     Click on the topic name.
 
     ![](../images/eem3.png)
@@ -104,7 +106,7 @@ Now that we have exported the FLIGHT.LANDINGS yaml we will login to the APIC Man
 
     ![](../images/apic12.png)
 
-1. There is not much to review in here so go ahead and select the **Develop APIs and products** from the icon on the left side of the screen.
+1. Take a moment to review the elements in the Async API definition. Then go ahead and select the **Develop APIs and products** from the icon on the left side of the screen.
 
     ![](../images/apic13.png)
 
@@ -114,7 +116,7 @@ Now that we have exported the FLIGHT.LANDINGS yaml we will login to the APIC Man
 
 ### 2.1 Create new Product for AsyncAPI
 
-Now we will need to create a new Product for are AsyncAPI to publish them.  We will be publishing the AsyncAPI to the Event Gateway that is part of Event Automation and is configured in the Event Endpoint Manager.  
+Now we will need to create a new Product for AsyncAPI to publish them.  We will be publishing the AsyncAPI to the Event Gateway that is part of Event Automation and is configured in the Event Endpoint Manager.  
 
 1. First we will create a new Product that could be used to include serveral AsyncAPIs. Select the **Add** and select **Product**.
 

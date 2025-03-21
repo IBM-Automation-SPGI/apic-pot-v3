@@ -1,6 +1,6 @@
 # IBM API Connect
 
-## Creating an API Connect Essentials GraphQL Proxy for a Salesforce Account REST API
+## Creating a API Connect Essentials GraphQL Proxy for a Salesforce Account REST API
 
 [Return to main APIC lab page](../README.md#lab-abstracts)
 
@@ -8,7 +8,7 @@
 
 # Table of Contents
 - [IBM API Connect](#ibm-api-connect)
-  - [Creating an API Connect Essentials GraphQL Proxy for a Salesforce Account REST API](#creating-a-stepzen-graphql-proxy-for-a-salesforce-account-rest-api)
+  - [Creating a API Connect Essentials GraphQL Proxy for a Salesforce Account REST API](#creating-a-stepzen-graphql-proxy-for-a-salesforce-account-rest-api)
 - [Table of Contents](#table-of-contents)
 - [1. Introduction ](#1-introduction-)
 - [2. API Connect Essentials ](#2-stepzen-)
@@ -27,7 +27,7 @@
 
 # 1. Introduction <a name="introduction"></a>
 
-In this lab, we will leverage an existing REST API to create an API Connect Essentials GraphQL Proxy and then expose the GraphQL Proxy through IBM API Connect. For the lab, we will be leveraging a Salesforce Account REST API deployed onto IBM App Connect. A Salesforce Account Object has 100+ fields. By using GraphQL, one can Query for fields that they are interested in thus reducing the response payload and network traffic.
+In this lab, we will leverage an existing REST API to create API Connect Essentials GraphQL Proxy and then expose the GraphQL Proxy through IBM API Connect. For the lab, we will be leveraging a Salesforce Account REST API deployed onto IBM App Connect. A Salesforce Account Object has 100+ fields. By using GraphQL, one can Query for fields that they are interested in thus reducing the response payload and network traffic.
 
 ![](images/design-diagram.png)
 
@@ -74,7 +74,7 @@ In this lab, we will leverage an existing REST API to create an API Connect Esse
 8\. In the terminal, log in with the Account that you copied in the step above.
 
 ```
-stepzen login eu-central-a.ibm.stepzen.net -a <account>
+API Connect Essentials login -a <account>
 ```
 
 Make sure you replace **\<account\>** with the **Account** you copied in the previous step.
@@ -87,7 +87,7 @@ Make sure you replace **\<account\>** with the **Account** you copied in the pre
 
 ## 2b. Import the Salesforce Account API Operations into the API Connect Essentials Configuration <a name="stepzen_import"></a>
 
-Next, you will be importing the `getAccount` and `getAccounts` operations into StepZen.
+Next, you will be importing the getAccount and getAccounts operations into StepZen.
 
 1\. Using the terminal, create a directory called `stepzen-salesforce-account-api`.
 
@@ -95,12 +95,15 @@ Next, you will be importing the `getAccount` and `getAccounts` operations into S
 mkdir stepzen-salesforce-account-api
 ```
 
+![](images/stepzen-terminal-mkdir.png)
+
 2\. Change into the `stepzen-salesforce-account-api` directory.
 
 ```
 cd stepzen-salesforce-account-api
 ```
 
+![](images/stepzen-terminal-cd.png)
 
 3\. Copy the below 5 lines as-is, and paste in the command line. This will create a file named `config.yaml`.
 
@@ -116,7 +119,7 @@ echo "access:
 4\. Next you will import the Get Salesforce Account by ID operation.  In the terminal, enter:
 
 ```
-stepzen import curl "<REPLACE-WITH-GETACCOUNT-URL>"
+API Connect Essentials import curl "<REPLACE-WITH-GETACCOUNT-URL>"
 ```
 
 Replace `<REPLACE-WITH-GETACCOUNT-URL>` with the value for the *`getAccount`* endpoint provided by the instructor within the parameters file . This is the REST endpoint of the existing Salesforce service.
@@ -132,7 +135,7 @@ Replace `<REPLACE-WITH-GETACCOUNT-URL>` with the value for the *`getAccount`* en
 6\. Next you will import the Get Salesforce Accounts operation.  In the terminal, enter:
 
 ```
-stepzen import curl "<REPLACE-WITH-GETACCOUNTS-URL>"
+API Connect Essentials import curl "<REPLACE-WITH-GETACCOUNTS-URL>"
 ```
 
 Replace `<REPLACE-WITH-GETACCOUNTS-URL>` with the value for the *`getAccounts`* endpoint provided by the instructor within the parameters file. This is the REST endpoint of the existing Salesforce service.
@@ -157,7 +160,7 @@ gedit curl/index.graphql
 
 ![](images/vi-getaccount-last.png)
 
-3\.  Replace **myQuery** with *`getAccountById`*. 
+3\.  Replace **myQuery** with *`getAccountById`*.
 
 ![](images/vi-getaccount.png)
 
@@ -173,7 +176,7 @@ gedit curl-01/index.graphql
 
 ![](images/vi-getaccounts-last.png)
 
-7\.  Replace **myQuery** with *`getAccounts`*. 
+7\.  Replace **myQuery** with *`getAccounts`*.
 
 ![](images/vi-getaccounts-edit.png)
 
@@ -191,7 +194,7 @@ The file should now begin with **RootEntry**.
 
 In this section, you will deploy the salesforce-account-api to the API Connect Essentials server.
 
-1\. In the terminal, make sure that you are in the `stepzen-salesforce-account-api` directory and enter `stepzen start`.
+1\. In the terminal, make sure that you are in the `stepzen-salesforce-account-api` directory and enter `API Connect Essentials start`.
 
 ![](images/stepzen-start.png)
 
@@ -549,7 +552,7 @@ Result:
 
 ![](images/apic-graphql-create.png)
 
-7\. For the **Title**, enter `stepzen-graphql-salesforce-account-api` and for the **GraphQL Server URL** paste the URL that you copied in the previous section.
+7\. For the **Title**, enter `stepzen-graphql-salesforce-account-api` and for the **GraphQL Server URL** paste the URL that you find in the GraphQL Explorer as Endpoint Label (where you run previously the queries).
 
 ![](images/apic-graphql-create-2.png)
 
