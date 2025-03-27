@@ -12,7 +12,7 @@ In this lab, you will consume the flight landing events using Kafka Clients like
 
 You should be logged on your VDI as *student*.
 
-1. Open a Firefox browser tab and navigate to [Github eemonCP4i](https://github.com/jjodl/eemoncp4i).
+1. Open a Firefox browser tab and navigate to [Github eemonCP4i](https://github.com/IBM-Automation-SPGI/eemoncp4i).
 
 	![](./images/setup1.png)
 
